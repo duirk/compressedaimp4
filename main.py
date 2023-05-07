@@ -39,7 +39,7 @@ def generate_compressed_video():
             else:
                 break
 
-    out = cv2.VideoWriter('compressed_video.avi',cv2.VideoWriter_fourcc(*'DIVX'), 30, (width,height))
+    out = cv2.VideoWriter('compressed_video.avi',cv2.VideoWriter_fourcc(*'DIVX'), 30, (300,250))
     for frame in tqdm(compressed_frames):
         out.write(frame)
     out.release()
